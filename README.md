@@ -14,7 +14,7 @@ This library provides a [pino](https://github.com/pinojs/pino) custom logger for
 
 ### Install
 
-The package require `kafkajs` to work, to list the correct version you can run:
+The package requires `kafkajs` to work, to list the correct version you can run:
 
 ```sh
 npm info "@mia-platform/kafkajs-pino-logger@latest" peerDependencies
