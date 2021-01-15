@@ -1,8 +1,11 @@
 'use strict'
 
 const tap = require('tap')
+const Ajv = require('ajv').default
 const { logLevel: kafkaJsLogLevels } = require('kafkajs')
+
 const customLogger = require('../index')
+const logSchema = require('./log.schema.json')
 
 tap.test('Creates the logging function', t => {
   t.test('with default level', t => {
@@ -101,5 +104,32 @@ tap.test('Creates the logging function', t => {
     t.end()
   })
 
+  t.end()
+})
+
+tap.test('Log matches schema', t => {
+  let loggedOutput = ''
+
+  const originalStdout = process.stdout.write.bind(process.stdout)
+  process.stdout.write = (chunk, encoding, callback) => {
+    if (typeof chunk === 'string') {
+      loggedOutput += chunk
+    }
+    return originalStdout(chunk, encoding, callback)
+  }
+
+  const ajv = new Ajv({ strict: false })
+  const validator = ajv.compile(logSchema)
+
+  const logger = customLogger()
+  logger({
+    level: kafkaJsLogLevels.INFO,
+    log: { message: 'Test info message', foo: 'bar' },
+  })
+
+  const parsedOutput = JSON.parse(loggedOutput.replace('\n', ''))
+  t.ok(validator(parsedOutput), 'Log schema validation failed', validator.errors)
+
+  process.stdout.write = originalStdout
   t.end()
 })
