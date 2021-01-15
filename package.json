@@ -34,13 +34,16 @@
     "version": "./scripts/update-version.sh ${npm_package_version} && git add CHANGELOG.md"
   },
   "dependencies": {
-    "kafkajs": "^1.15.0",
     "pino": "^6.10.0"
   },
   "devDependencies": {
+    "kafkajs": "^1.15.0",
     "@mia-platform/eslint-config-mia": "^3.0.0",
     "eslint": "^7.17.0",
     "tap": "^14.11.0"
+  },
+  "peerDependencies": {
+    "kafkajs": ">=1.15.0"
   },
   "engines": {
     "node": ">=10"
