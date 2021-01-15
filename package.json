@@ -1,0 +1,55 @@
+{
+  "name": "@mia-platform/kafkajs-pino-logger",
+  "version": "1.0.0",
+  "description": "A custom Pino logger for KafkaJS that follows the Mia-Platform guidelines'",
+  "keyword": [
+    "mia-platform",
+    "kafka",
+    "kafkajs",
+    "log",
+    "logger",
+    "pino"
+  ],
+  "homepage": "https://www.mia-platform.eu/",
+  "bugs": {
+    "url": "https://github.com/mia-platform/kafkajs-pino-logger/issues",
+    "email": "core@mia-platform.eu"
+  },
+  "license": "MIT",
+  "author": "Mia Platform Core Team <core@mia-platform.eu>",
+  "contributors": [
+    "Edoardo Pessina <edoardo.pessina@mia-platform.eu>"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mia-platform/kafkajs-pino-logger.git"
+  },
+  "scripts": {
+    "checkonly": "! grep -R '\\.only' tests/",
+    "lint": "eslint . --ignore-path .gitignore",
+    "start": "echo 'unable to start the library directly' && exit 1",
+    "test": "npm run lint && npm run unit && npm run checkonly",
+    "unit": "tap --no-esm -b -o tap.log tests/*.test.js",
+    "version": "./scripts/update-version.sh ${npm_package_version} && git add CHANGELOG.md"
+  },
+  "dependencies": {
+    "pino": "^6.10.0"
+  },
+  "devDependencies": {
+    "@mia-platform/eslint-config-mia": "^3.0.0",
+    "ajv": "^7.0.3",
+    "eslint": "^7.17.0",
+    "kafkajs": "^1.15.0",
+    "tap": "^14.11.0"
+  },
+  "peerDependencies": {
+    "kafkajs": ">=1.15.0"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "eslintConfig": {
+    "extends": "@mia-platform/eslint-config-mia"
+  }
+}
