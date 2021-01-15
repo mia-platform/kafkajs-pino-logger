@@ -4,6 +4,7 @@
 
 [![NPM version][npmjs-svg]][npmjs-com]
 [![javascript style guide](https://img.shields.io/badge/code_style-standard--mia-orange.svg)](https://github.com/mia-platform/eslint-config-mia)
+[![Coverage Status][coverall-svg]][coverall-io]
 
 </div>
 
@@ -52,5 +53,7 @@ The logs will have this form:
 {"level":20,"time":1610718695,"pid":46244,"hostname":"test-host","logger":"kafkajs","extraKey":"Your extra","msg":"Your log message"}
 ```
 
+[coverall-svg]: https://coveralls.io/repos/github/mia-platform/kafkajs-pino-logger/badge.svg?branch=main
+[coverall-io]: https://coveralls.io/github/mia-platform/kafkajs-pino-logger?branch=main
 [npmjs-svg]: https://img.shields.io/npm/v/@mia-platform/kafkajs-pino-logger.svg?logo=npm
 [npmjs-com]: https://www.npmjs.com/package/@mia-platform/kafkajs-pino-logger
