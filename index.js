@@ -21,18 +21,19 @@ function toPinoLogLevel(kafkaLogLevel) {
     return 'error'
   case kafkaJsLogLevels.WARN:
     return 'warn'
-  case kafkaJsLogLevels.INFO:
-    return 'info'
   case kafkaJsLogLevels.DEBUG:
     return 'debug'
   case kafkaJsLogLevels.NOTHING:
     return 'silent'
+  case kafkaJsLogLevels.INFO:
+  default:
+    return 'info'
   }
 }
 
 module.exports = function PinoLogCreator(logLevel) {
   const logger = pino({
-    level: toPinoLogLevel((!logLevel && logLevel !== 0) ? kafkaJsLogLevels.INFO : logLevel),
+    level: toPinoLogLevel(logLevel),
     redact: defaultRedactionRules(),
     timestamp: timestampFunction,
   })
