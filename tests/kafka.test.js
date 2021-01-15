@@ -35,6 +35,7 @@ tap.test('Kafka client with custom logger', t => {
     t.ok(parsedOutput.time)
     t.ok(parsedOutput.pid)
     t.ok(parsedOutput.hostname)
+    t.strictSame(parsedOutput.logger, 'kafkajs')
     t.strictSame(parsedOutput.foo, 'bar')
     t.strictSame(parsedOutput.msg, 'Test error log')
 
@@ -62,6 +63,7 @@ tap.test('Kafka client with custom logger', t => {
     t.ok(parsedOutput.time)
     t.ok(parsedOutput.pid)
     t.ok(parsedOutput.hostname)
+    t.strictSame(parsedOutput.logger, 'kafkajs')
     t.strictSame(parsedOutput.foo, 'bar')
     t.strictSame(parsedOutput.msg, 'Test warn log')
 
@@ -89,6 +91,7 @@ tap.test('Kafka client with custom logger', t => {
     t.ok(parsedOutput.time)
     t.ok(parsedOutput.pid)
     t.ok(parsedOutput.hostname)
+    t.strictSame(parsedOutput.logger, 'kafkajs')
     t.strictSame(parsedOutput.foo, 'bar')
     t.strictSame(parsedOutput.msg, 'Test info log')
 
@@ -116,6 +119,7 @@ tap.test('Kafka client with custom logger', t => {
     t.ok(parsedOutput.time)
     t.ok(parsedOutput.pid)
     t.ok(parsedOutput.hostname)
+    t.strictSame(parsedOutput.logger, 'kafkajs')
     t.strictSame(parsedOutput.foo, 'bar')
     t.strictSame(parsedOutput.msg, 'Test debug log')
 

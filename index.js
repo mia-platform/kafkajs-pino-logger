@@ -40,7 +40,7 @@ module.exports = function PinoLogCreator(logLevel) {
 
   return ({ level, log }) => {
     const pinoLevel = toPinoLogLevel(level)
-    const { message, timestamp, logger: kafkaLogger, ...extras } = log
+    const { message, timestamp, ...extras } = log
     logger[pinoLevel](extras, message)
   }
 }
