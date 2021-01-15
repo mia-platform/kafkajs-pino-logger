@@ -14,6 +14,12 @@ This library provides a [pino](https://github.com/pinojs/pino) custom logger for
 
 ### Install
 
+The package require `kafkajs` to work, to list the correct version you can run:
+
+```sh
+npm info "@mia-platform/kafkajs-pino-logger@latest" peerDependencies
+```
+
 To install the package you can run:
 
 ```sh
@@ -36,3 +42,12 @@ const kafka = new Kafka({
   logCreator: PinoLogCreator
 })
 ```
+
+### Output logs
+
+The logs will have this form:
+
+```json
+{"level":20,"time":1610718695,"pid":46244,"hostname":"test-host","logger":"kafkajs","extraKey":"Your extra","msg":"Your log message"}
+```
+
