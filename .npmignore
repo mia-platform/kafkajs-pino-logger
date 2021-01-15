@@ -9,3 +9,7 @@ tests
 .travis.yml
 *.log
 *.tgz
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+README.md
+CHANGELOG.md
