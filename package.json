@@ -43,7 +43,7 @@
     "ajv": "^7.0.3",
     "eslint": "^7.17.0",
     "kafkajs": "^1.15.0",
-    "tap": "^14.11.0"
+    "tap": "^15.1.2"
   },
   "peerDependencies": {
     "kafkajs": ">=1.15.0"
