@@ -36,7 +36,7 @@
     "postcoverage": "tap --coverage-report=html --no-browser"
   },
   "dependencies": {
-    "pino": "^6.10.0"
+    "pino": "^7.4.1"
   },
   "devDependencies": {
     "@mia-platform/eslint-config-mia": "^3.0.0",
