@@ -41,7 +41,7 @@
   "devDependencies": {
     "@mia-platform/eslint-config-mia": "^3.0.0",
     "ajv": "^7.0.3",
-    "eslint": "^7.17.0",
+    "eslint": "^8.23.0",
     "kafkajs": "^1.15.0",
     "tap": "^14.11.0"
   },
