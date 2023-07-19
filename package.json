@@ -30,7 +30,7 @@
     "lint": "eslint . --ignore-path .gitignore",
     "start": "echo 'unable to start the library directly' && exit 1",
     "test": "npm run lint && npm run unit && npm run checkonly",
-    "unit": "tap --no-esm -b -o tap.log tests/*.test.js",
+    "unit": "tap -b -o tap.log tests/*.test.js",
     "version": "./scripts/update-version.sh ${npm_package_version} && git add CHANGELOG.md",
     "coverage": "npm run unit -- --coverage-report=text-summary",
     "postcoverage": "tap --coverage-report=html --no-browser"
@@ -43,13 +43,13 @@
     "ajv": "^7.0.3",
     "eslint": "^7.17.0",
     "kafkajs": "^1.15.0",
-    "tap": "^14.11.0"
+    "tap": "^16.3.7"
   },
   "peerDependencies": {
     "kafkajs": ">=1.15.0"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=18"
   },
   "eslintConfig": {
     "extends": "@mia-platform/eslint-config-mia"
