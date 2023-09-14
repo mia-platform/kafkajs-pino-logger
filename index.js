@@ -12,7 +12,7 @@ function defaultRedactionRules() {
 }
 
 function timestampFunction() {
-  return `,"time":${Math.round(Date.now() / 1000.0)}`
+  return `,"time":${Date.now()}`
 }
 
 function toPinoLogLevel(kafkaLogLevel) {

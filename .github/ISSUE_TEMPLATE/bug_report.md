@@ -26,7 +26,7 @@ assignees: ''
 ## System Info
 <!-- please complete the following information-->
 
-- Node Version [e.g. 14.11.0]
+- Node Version [e.g. 18.16.0]
 
 ## Additional context
 
