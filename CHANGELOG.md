@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Breaking change
 
 - time is not displayed in seconds but in milliseconds
+- update `kafkajs` to `v2.0.0` and other development dependencies
 
 ## v1.0.0 - 2021-01-15
 
