@@ -36,13 +36,13 @@
     "postcoverage": "tap --coverage-report=html --no-browser"
   },
   "dependencies": {
-    "pino": "^6.10.0"
+    "pino": "^8.15.1"
   },
   "devDependencies": {
     "@mia-platform/eslint-config-mia": "^3.0.0",
-    "ajv": "^7.0.3",
-    "eslint": "^7.17.0",
-    "kafkajs": "^1.15.0",
+    "ajv": "^8.12.0",
+    "eslint": "^8.49.0",
+    "kafkajs": "^2.2.4",
     "tap": "^16.3.7"
   },
   "peerDependencies": {
