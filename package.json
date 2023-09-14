@@ -42,7 +42,7 @@
     "@mia-platform/eslint-config-mia": "^3.0.0",
     "ajv": "^7.0.3",
     "eslint": "^7.17.0",
-    "kafkajs": "^1.15.0",
+    "kafkajs": "^2.2.4",
     "tap": "^16.3.7"
   },
   "peerDependencies": {
