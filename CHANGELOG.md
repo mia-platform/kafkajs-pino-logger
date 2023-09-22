@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Github Actions to release the library and automatically publish on npm registry
+
+## v2.0.0 - 2023-09-14
+
 ### Breaking change
 
 - time is not displayed in seconds but in milliseconds
