@@ -1,6 +1,6 @@
 {
   "name": "@mia-platform/kafkajs-pino-logger",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A custom Pino logger for KafkaJS that follows the Mia-Platform guidelines'",
   "keyword": [
     "mia-platform",
