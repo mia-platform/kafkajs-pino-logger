@@ -23,7 +23,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mia-platform/kafkajs-pino-logger.git"
+    "url": "git+https://github.com/mia-platform/kafkajs-pino-logger.git"
   },
   "scripts": {
     "checkonly": "! grep -R '\\.only' tests/",
